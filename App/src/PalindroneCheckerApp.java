@@ -1,18 +1,33 @@
-public class PalindroneCheckerApp {
-    static final String APP_NAME = "Palindrome Checker Application";
-    static final String APP_VERSION = "Version 1.0";
+/*
+ * UC2: Print a Hardcoded Palindrome Result
+ * Palindrome Checker Application
+ */
 
-    // Main Method - Entry point of the Java application
+public class PalindromeCheckerApp{
+
     public static void main(String[] args) {
 
-        // Display Welcome Message
-        System.out.println("=======================================");
-        System.out.println(" Welcome to " + APP_NAME);
-        System.out.println(" " + APP_VERSION);
-        System.out.println("=======================================");
+        // Hardcoded string literal
+        String word = "madam";
 
-        // Application flow continues (placeholder for next use case)
-        System.out.println("Application started successfully.");
-        System.out.println("Ready for palindrome processing...");
+        // Variable to store reversed string
+        String reversed = "";
+
+        // Reverse the string
+        for (int i = word.length() - 1; i >= 0; i--) {
+            reversed = reversed + word.charAt(i);
+        }
+
+        // Check if palindrome using if-else
+        if (word.equals(reversed)) {
+            System.out.println("The word \"" + word + "\" is a Palindrome.");
+        } else {
+            System.out.println("The word \"" + word + "\" is NOT a Palindrome.");
+        }
+
+        System.out.println("Program execution completed.");
     }
+}
+
+void main() {
 }
